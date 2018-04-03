@@ -1,0 +1,43 @@
+
+#提交修改和提交文件是一样的2步(第一步是git add  第二步是：git commit)。
+ 
+#文件放入暂存区
+    git add
+#把文件保存到本地仓库 
+ git commit -m "提交的注释及说明"
+# 来查看下结果，及状态
+  git status
+
+#比较文件修改了哪些地方
+  git diff 文件名
+
+#查看日志
+  git log 
+ 可以使用命令 git log –pretty=oneline 演示如下：
+#版本回退
+  git reset  –hard HEAD^
+ 现在我想使用版本回退操作，我想把当前的版本回退到上一个版本，要使用什么命令呢？可以使用如下2种命令，
+ 第一种是：git reset  –hard HEAD^ 那么如果要回退到上上个版本只需把HEAD^ 改成 HEAD^^ 以此类推。那如果要回退到前100个版本的话，
+ 使用上面的方法肯定不方便，我们可以使用下面的简便命令操作：git reset  –hard HEAD~100 即可。未回退之前的readme.txt内容如下：
+
+
+ #通过版本号回退
+ git reset  –hard 版本号
+
+ git checkout –readme.txt 意思就是，把readme.txt文件在工作区做的修改全部撤
+
+#删除文件
+ rm b.txt ，
+
+#上传文件到远程仓库：
+第一次提交：（连接到远程仓库）
+git remote add origin https://github.com/Ruidaimeng/FirstRepository20180330.git
+
+用户名：Ruidaimeng
+密码：
+
+第二次：
+git push origin master
+
+
+#创建分支：
